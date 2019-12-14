@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace BDSoft.Common
+{
+    public class Debuger
+    {
+        private static Debuger instance = new Debuger();
+
+        public static Debuger Instance
+        {
+            get { return Debuger.instance; }
+            set { Debuger.instance = value; }
+        }
+        private Debuger()
+        {
+
+        }
+
+
+        DateTime dtOld=DateTime.Now;
+        DateTime dtNew=DateTime.Now;
+
+        bool showTimeSpan = true;
+
+        public bool ShowTimeSpan
+        {
+            get { return showTimeSpan; }
+            set { showTimeSpan = value; }
+        }
+
+        public void RecordStartTime()
+        {
+            dtNew = dtOld = DateTime.Now;
+        }
+
+        /// <summary>
+        /// 打印信息
+        /// </summary>
+        /// <param name="keyWord">显示信息</param>
+        public void WriteLine(string keyWord)
+        {
+            this.WriteLine(keyWord, showTimeSpan);
+        }
+
+        /// <summary>
+        /// 打印信息
+        /// </summary>
+        /// <param name="keyWord">显示信息</param>
+        /// <param name="showTimeSpan">是否显示时间差</param>
+        public void WriteLine(string keyWord, bool showTimeSpan)
+        {
+            dtNew = DateTime.Now;
+            keyWord = keyWord.Trim();
+            if (showTimeSpan)
+            {
+                Console.Write(keyWord);
+                TimeSpan ts = dtNew - dtOld;
+                string strFormt = "距离上次时间差：{0}毫秒";
+                strFormt = string.Format(strFormt, ts.Milliseconds);
+                if (!string.IsNullOrEmpty(keyWord))
+                    strFormt = "," + strFormt;
+
+                dtNew = DateTime.Now;
+                Console.WriteLine(strFormt);
+            }
+            else
+                Console.WriteLine(keyWord);
+
+            dtOld = dtNew;
+        }
+
+
+        
+    }
+}

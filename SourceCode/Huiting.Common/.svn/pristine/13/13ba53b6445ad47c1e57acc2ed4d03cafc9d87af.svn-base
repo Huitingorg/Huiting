@@ -1,0 +1,162 @@
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml;
+using System.IO;
+
+namespace BDSoft.Common
+{
+    public class ObjectSerializer
+    {
+        private static ObjectSerializer instance = new ObjectSerializer();
+
+        public static ObjectSerializer Instance
+        {
+            get { return ObjectSerializer.instance; }
+        }
+
+        private ObjectSerializer()
+        {
+
+        }
+
+        public bool WriteObjectToXmlFile<A>(object obj, string xmlFile) where A : Attribute
+        {
+            if (File.Exists(xmlFile))
+                File.Delete(xmlFile);
+
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlDeclaration xmlDecl = xmlDoc.CreateXmlDeclaration("1.0", "gb2312", null);
+            xmlDoc.AppendChild(xmlDecl);
+
+            Type type = obj.GetType();
+            XmlElement xeRoot = xmlDoc.CreateElement(type.Name);
+            xmlDoc.AppendChild(xeRoot);
+
+            Serialize<A>(xeRoot, obj);
+
+            xmlDoc.Save(xmlFile);
+
+            return true;
+        }
+
+        public bool ReadObjectFromXmlFile<A>(object obj, string xmlFile) where A : Attribute
+        {
+            if (!File.Exists(xmlFile))
+                return false;
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(xmlFile);
+            if (xmlDoc == null || xmlDoc.ChildNodes.Count <= 0)
+                return false;
+            Type type = obj.GetType();
+            XmlNode xnRoot = xmlDoc.SelectSingleNode(type.Name);
+            DecSerialize<SerializableAttribute>(xnRoot, obj);
+
+            return true;
+        }
+
+        public bool Serialize<A>(XmlNode xnParent, object obj) where A : Attribute
+        {
+            Type typeClass = obj.GetType();
+            PropertyInfo[] piAryClass = typeClass.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            if (piAryClass.Length <= 0)
+                return false;
+
+            try
+            {
+                foreach (PropertyInfo item in piAryClass)
+                {
+                    A attribute = PublicMethods.GetAttribute<A>(item);
+                    if (attribute != null)
+                        continue;
+                    if (item.CanWrite == false)
+                        continue;
+
+                    string pName = item.Name;
+                    object value = item.GetValue(obj, null);
+
+                    XmlElement xeChild = xnParent.OwnerDocument.CreateElement(item.Name);
+                    object objChildValue = item.GetValue(obj, null);
+                    if (objChildValue == null)
+                        continue;
+                    
+                    TypeConverter converter = TypeDescriptor.GetConverter(item.PropertyType);
+                    //如果能通过string与之相互转化，则转化
+                    if (GetConversionSupported(converter, typeof(string)))
+                    {
+                        if (objChildValue != null)
+                        {
+                            xeChild.InnerText = objChildValue.ToString();
+                            xnParent.AppendChild(xeChild);
+                        }
+                    }
+                    else if (item.PropertyType.IsClass)
+                    {
+                        if (Serialize<A>(xeChild, objChildValue)) 
+                            xnParent.AppendChild(xeChild);
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool DecSerialize<A>(XmlNode xmlNode, object obj)
+        {
+            PropertyInfo[] piAry = obj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public);
+            foreach (PropertyInfo item in piAry)
+            {
+                try
+                {
+                    XmlNode xnChild = xmlNode.SelectSingleNode(item.Name);
+                    if (xnChild == null)
+                        continue;
+
+                    object objChildValue = null;
+                    TypeConverter converter = TypeDescriptor.GetConverter(item.PropertyType);
+                    if (GetConversionSupported(converter, typeof(string)))
+                    {
+                        objChildValue = converter.ConvertFrom(null, CultureInfo.InvariantCulture, xnChild.InnerText);
+                        item.SetValue(obj, objChildValue, null);
+                    }
+                    else if (item.PropertyType.IsClass)
+                    {
+                        objChildValue = Activator.CreateInstance(item.PropertyType);
+                        DecSerialize<SerializableAttribute>(xnChild, objChildValue);
+                        item.SetValue(obj, objChildValue, null);
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    PublicMethods.WarnMessageBox(ex.Message);
+                }
+            }
+
+            return true;
+        }
+
+        //转换支持
+        private bool GetConversionSupported(TypeConverter converter, Type conversionType)
+        {
+            return (converter.CanConvertFrom(conversionType) && converter.CanConvertTo(conversionType));
+        }
+    }
+}

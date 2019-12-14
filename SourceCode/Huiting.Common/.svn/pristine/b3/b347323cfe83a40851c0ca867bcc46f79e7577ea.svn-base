@@ -1,0 +1,176 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Reflection;
+
+namespace BDSoft.Common
+{
+    /*
+        此类要承担诸多功能：
+        1.与int/string之间的相互转换
+        2.支持实例(静态属性)指定或不指定数值
+        3.一些辅助的功能，如比较大小等
+        4.一些方便使用的功能，如ForEach方法
+        5.像string类(class)一样，表现出值传递的效果      
+     */
+    public class HEnum : IComparable<HEnum>, IEquatable<HEnum>
+    {
+        static int counter = -1;            //默认数值计数器
+        private static Hashtable hashTable = new Hashtable();       //不重复数值集合
+        protected static List<HEnum> members = new List<HEnum>();   //所有实例集合
+        private string Name { get; set; }
+        private int Value { get; set; }
+
+        /// <summary>
+        /// 不指定数值构造实例
+        /// </summary>
+        protected HEnum(string name)
+        {
+            this.Name = name;
+            this.Value = ++counter;
+            members.Add(this);
+            if (!hashTable.ContainsKey(this.Value))
+            {
+                hashTable.Add(this.Value, this);
+            }
+        }
+
+        /// <summary>
+        /// 指定数值构造实例
+        /// </summary>
+        protected HEnum(string name, int value)
+            : this(name)
+        {
+            this.Value = value;
+            counter = value;
+        }
+
+        /// <summary>
+        /// 向string转换
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return this.Name.ToString();
+        }
+
+        public HEnum ToEnum(string enmuStr)
+        {
+            FieldInfo fi = this.GetType().GetField(enmuStr, BindingFlags.Static | BindingFlags.IgnoreCase);
+            if (fi == null)
+                return null;
+            return fi.GetValue(this) as HEnum;
+        }
+
+        /// <summary>
+        /// 显式强制从int转换
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
+        public static explicit operator HEnum(int i)
+        {
+            if (hashTable.ContainsKey(i))
+            {
+                return (HEnum)members[i];
+            }
+            return new HEnum(i.ToString(), i);
+        }
+
+        /// <summary>
+        /// 显式强制向int转换
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        public static explicit operator int(HEnum e)
+        {
+            return e.Value;
+        }
+
+        public static void ForEach(Action<HEnum> action)
+        {
+            foreach (HEnum item in members)
+            {
+                action(item);
+            }
+        }
+
+        public int CompareTo(HEnum other)
+        {
+            return this.Value.CompareTo(other.Value);
+        }
+
+        public bool Equals(HEnum other)
+        {
+            return this.Value.Equals(other.Value);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is HEnum))
+                return false;
+            return this.Value == ((HEnum)obj).Value;
+        }
+
+        public override int GetHashCode()
+        {
+            HEnum std = (HEnum)hashTable[this.Value];
+            if (std.Name == this.Name)
+                return base.GetHashCode();
+            return std.GetHashCode();
+        }
+
+        public static bool operator !=(HEnum e1, HEnum e2)
+        {
+            return e1.Value != e2.Value;
+        }
+
+        public static bool operator <(HEnum e1, HEnum e2)
+        {
+            return e1.Value < e2.Value;
+        }
+
+        public static bool operator <=(HEnum e1, HEnum e2)
+        {
+            return e1.Value <= e2.Value;
+        }
+
+        public static bool operator ==(HEnum e1, HEnum e2)
+        {
+            return e1.Value == e2.Value;
+        }
+
+        public static bool operator >(HEnum e1, HEnum e2)
+        {
+            return e1.Value > e2.Value;
+        }
+
+        public static bool operator >=(HEnum e1, HEnum e2)
+        {
+            return e1.Value >= e2.Value;
+        }
+    }
+
+    class EnumUse1 : HEnum
+    {
+        protected EnumUse1(string name) : base(name) { }
+
+        protected EnumUse1(string name, int value) : base(name, value) { }
+
+        public static EnumUse1 A = new EnumUse1("A");
+        public static EnumUse1 B = new EnumUse1("B", 2);
+        public static EnumUse1 C = new EnumUse1("C", 2);
+        public static EnumUse1 D = new EnumUse1("D");
+    }
+
+    class EnumUse2 : EnumUse1
+    {
+        protected EnumUse2(string name) : base(name) { }
+
+        protected EnumUse2(string name, int value) : base(name, value) { }
+
+        public static EnumUse2 E = new EnumUse2("E");
+    }
+
+}

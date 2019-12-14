@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+
+namespace BDSoft.Common
+{
+    /// <summary>
+    /// 元素
+    /// </summary>
+    public class ElementDescriptionAttribute:DescriptionAttribute
+    {
+        string descrption;
+
+        public string Descrption
+        {
+            get { return descrption; }
+            set { descrption = value; }
+        }
+    }
+
+    //类描述
+    public class ClassDescriptionAttribute : ElementDescriptionAttribute
+    {
+
+    }
+
+    public class MethodDescriptionAttribute : ElementDescriptionAttribute
+    {
+        string[] paramAry;
+
+        public string[] ParamAry
+        {
+            get { return paramAry; }
+            set { paramAry = value; }
+        }
+    }
+
+
+    public class ComponentDescriptionAttribute : ClassDescriptionAttribute
+    {
+        string name;
+
+        /// <summary>
+        /// 名字
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+    }
+
+
+}

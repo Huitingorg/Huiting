@@ -1,0 +1,138 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+
+namespace BDSoft.Common
+{
+    [Description("图像处理器")]
+    [Serializable]
+    public class ImageOperator
+    {
+        private static ImageOperator instance = new ImageOperator();
+
+        public static ImageOperator Instance
+        {
+            get { return ImageOperator.instance; }
+        }
+
+        private ImageOperator()
+        {
+        }
+
+        public Bitmap ZoomBitmap(Bitmap originalImage, Size fixedSize, ImageChangedMode changedMode, bool disposeOriginalImage)
+        {
+            return ZoomBitmap(originalImage, fixedSize.Width, fixedSize.Height, changedMode, disposeOriginalImage);
+        }
+
+        /// <summary>
+        /// 获取缩放后图片
+        /// </summary>
+        /// <param name="originalImage">原始图片</param>
+        /// <param name="fixedWidth">固定宽度</param>
+        /// <param name="fixedHeight">固定高度</param>
+        /// <param name="changedMode">改变模式</param>
+        /// <param name="disposeOriginalImage">释放原始照片</param>
+        /// <returns></returns>
+        public Bitmap ZoomBitmap(Bitmap originalImage, int fixedWidth, int fixedHeight, ImageChangedMode changedMode, bool disposeOriginalImage)
+        {
+            int towidth = fixedWidth;
+            int toheight = fixedHeight;
+
+            int x = 0;
+            int y = 0;
+            int ow = originalImage.Width;
+            int oh = originalImage.Height;
+
+            switch (changedMode)
+            {
+                case ImageChangedMode.FixedWH://指定高宽缩放（可能变形）   
+                    break;
+                case ImageChangedMode.ZoomHByW://指定宽，高按比例   
+                    toheight = originalImage.Height * fixedWidth / originalImage.Width;
+                    break;
+                case ImageChangedMode.ZoomWByH://指定高，宽按比例
+                    towidth = originalImage.Width * fixedHeight / originalImage.Height;
+                    break;
+                case ImageChangedMode.ZoomBySacle://根据源/目标 的宽高比例，哪个指标大，固定哪个指标，缩放另一个指标   
+                    double scaleW = originalImage.Width / fixedWidth;
+                    double scaleH = originalImage.Height / fixedHeight;
+                    if (scaleW > scaleH)
+                        toheight = originalImage.Height * fixedWidth / originalImage.Width;
+                    else
+                        towidth = originalImage.Width * fixedHeight / originalImage.Height;
+                    break;
+                case ImageChangedMode.CutByFixedWH://指定高宽裁减（不变形）   
+                default:
+                    if ((double)originalImage.Width / (double)originalImage.Height > (double)towidth / (double)toheight)
+                    {
+                        oh = originalImage.Height;
+                        ow = originalImage.Height * towidth / toheight;
+                        y = 0;
+                        x = (originalImage.Width - ow) / 2;
+                    }
+                    else
+                    {
+                        ow = originalImage.Width;
+                        oh = originalImage.Width * fixedHeight / towidth;
+                        x = 0;
+                        y = (originalImage.Height - oh) / 2;
+                    }
+                    break;
+            }
+
+            //新建一个bmp图片
+            System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(towidth, toheight);
+            //新建一个画板
+            Graphics g = System.Drawing.Graphics.FromImage(bitmap);
+
+            try
+            {
+                //设置高质量插值法
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+
+                //设置高质量,低速度呈现平滑程度
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+
+                //清空画布并以透明背景色填充
+                g.Clear(Color.Transparent);
+
+                //在指定位置并且按指定大小绘制原图片的指定部分
+                g.DrawImage(originalImage, new Rectangle(0, 0, towidth, toheight),
+                new Rectangle(x, y, ow, oh),
+                GraphicsUnit.Pixel);
+            }
+            catch (System.Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (disposeOriginalImage)
+                    originalImage.Dispose();
+                g.Dispose();
+            }
+
+            return bitmap;
+        }
+
+
+    }
+
+    [Serializable]
+    public enum ImageChangedMode
+    {
+        [Description("固定宽高")]
+        FixedWH,
+        [Description("固定宽,同比缩放高")]
+        ZoomHByW,
+        [Description("固定高,同比缩放宽")]
+        ZoomWByH,
+        [Description("根据源/目标 的宽高比例，哪个指标大，固定哪个指标，缩放另一个指标")]
+        ZoomBySacle,
+        [Description("剪切")]
+        CutByFixedWH
+    }
+}

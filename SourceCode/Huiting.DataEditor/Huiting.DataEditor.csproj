@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF8E993D-4BD5-414F-BBAC-EECD61C91B94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Huiting.DataEditor</RootNamespace>
+    <AssemblyName>Huiting.DataEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\MyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_DataUnitSel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_DataUnitSel.Designer.cs">
+      <DependentUpon>UC_DataUnitSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_ExcelFileSel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_ExcelFileSel.Designer.cs">
+      <DependentUpon>UC_ExcelFileSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enum\DataImportOpType.cs" />
+    <Compile Include="ExcelHelper\ExcelFiledMappingConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelHelper\ExcelFiledMappingConfig.Designer.cs">
+      <DependentUpon>ExcelFiledMappingConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelHelper\ExcelFiledMappingEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelHelper\ExcelFiledMappingEditForm.Designer.cs">
+      <DependentUpon>ExcelFiledMappingEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelHelper\ExcelTempleateGetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelHelper\ExcelTempleateGetForm.Designer.cs">
+      <DependentUpon>ExcelTempleateGetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataImport.Designer.cs">
+      <DependentUpon>FrmDataImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExcelColumnMappingConfig.cs" />
+    <Compile Include="Models\RunInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\UC_DataUnitSel.resx">
+      <DependentUpon>UC_DataUnitSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_ExcelFileSel.resx">
+      <DependentUpon>UC_ExcelFileSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelHelper\ExcelFiledMappingConfig.resx">
+      <DependentUpon>ExcelFiledMappingConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelHelper\ExcelFiledMappingEditForm.resx">
+      <DependentUpon>ExcelFiledMappingEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelHelper\ExcelTempleateGetForm.resx">
+      <DependentUpon>ExcelTempleateGetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataImport.resx">
+      <DependentUpon>FrmDataImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Huiting.Common\Huiting.Common.csproj">
+      <Project>{50d6a0c0-6bff-4128-9ff2-468f341ff098}</Project>
+      <Name>Huiting.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Huiting.Components\Huiting.Components.csproj">
+      <Project>{644638b2-bcf7-4c9b-b2a3-a0448b1613ca}</Project>
+      <Name>Huiting.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Huiting.Contract\Huiting.Contract.csproj">
+      <Project>{73fa6641-ba32-4f10-9ab8-cd41da69f32a}</Project>
+      <Name>Huiting.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Huiting.DBAccess\Huiting.DBAccess.csproj">
+      <Project>{41a59410-9945-4609-8ca2-8a8e2a2f08a1}</Project>
+      <Name>Huiting.DBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Huiting.ExcelOperation\Huiting.ExcelOperation.csproj">
+      <Project>{a2072bff-a201-4b69-ba1b-cda4c3f2e80d}</Project>
+      <Name>Huiting.ExcelOperation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

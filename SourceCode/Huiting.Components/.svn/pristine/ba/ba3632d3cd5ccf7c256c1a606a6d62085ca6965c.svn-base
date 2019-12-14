@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{644638B2-BCF7-4C9B-B2A3-A0448B1613CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BDSoft.Components</RootNamespace>
+    <AssemblyName>BDSoft.Components</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Release\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.TreeListView, Version=1.0.3393.25113, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.TreeListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoubleProgressFrom\DoubleProgressFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoubleProgressFrom\DoubleProgressFrom.Designer.cs">
+      <DependentUpon>DoubleProgressFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumberBox\BDNumBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Test2.cs" />
+    <Compile Include="Test_Predicate.cs" />
+    <Compile Include="DrawPanel\DrawPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawPanel\FontMousePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawPanel\MousePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawPanel\NavigationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FreePanel\FreeLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\FrmChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmChild.Designer.cs">
+      <DependentUpon>FrmChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmChildWithOutMinAndMax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmChildWithOutMinAndMax.Designer.cs">
+      <DependentUpon>FrmChildWithOutMinAndMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splitter\CollapsibleSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabControl\RoundedTabControl\RoundedTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabControl\RoundedTabControl\NativeMethods.cs" />
+    <Compile Include="TabControl\RoundedTabControl\RECT.cs" />
+    <Compile Include="TabControl\RoundedTabControl\UpDownButtonPaintEventArgs.cs" />
+    <Compile Include="TreeListView\TreeListViewFast.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewByRightSelected.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewFast.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UctStatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UctStatusBar.Designer.cs">
+      <DependentUpon>UctStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UctBottom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UctBottom.Designer.cs">
+      <DependentUpon>UctBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumberBox\BDNumBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBox\HWTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridView\DataGridViewColumnNode.cs" />
+    <Compile Include="DataGridView\FrmTreeHeadColumnsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGridView\FrmTreeHeadColumnsEdit.Designer.cs">
+      <DependentUpon>FrmTreeHeadColumnsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridView\HWVDataGridViewColumnConverter.cs" />
+    <Compile Include="DataGridView\HWVDataGridViewColumnEditor.cs" />
+    <Compile Include="DataGridView\TreeHeadDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DateControl\C_YearMonthControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DateControl\UC_YearMonthSel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateControl\UC_YearMonthSel.Designer.cs">
+      <DependentUpon>UC_YearMonthSel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoubleProgressFrom\DoubleProgressFrom.resx">
+      <DependentUpon>DoubleProgressFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrawPanel\DrawPanel.resx">
+      <DependentUpon>DrawPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrawPanel\MousePanel.resx">
+      <DependentUpon>MousePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmChild.resx">
+      <DependentUpon>FrmChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmChildWithOutMinAndMax.resx">
+      <DependentUpon>FrmChildWithOutMinAndMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TreeListView\TreeListViewFast.resx">
+      <DependentUpon>TreeListViewFast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeView\TreeViewFast.resx">
+      <DependentUpon>TreeViewFast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UctStatusBar.resx">
+      <DependentUpon>UctStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UctBottom.resx">
+      <DependentUpon>UctBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGridView\FrmTreeHeadColumnsEdit.resx">
+      <DependentUpon>FrmTreeHeadColumnsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateControl\UC_YearMonthSel.resx">
+      <DependentUpon>UC_YearMonthSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_64.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\chart-o128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BDSoft.Common\BDSoft.Common.csproj">
+      <Project>{50d6a0c0-6bff-4128-9ff2-468f341ff098}</Project>
+      <Name>BDSoft.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

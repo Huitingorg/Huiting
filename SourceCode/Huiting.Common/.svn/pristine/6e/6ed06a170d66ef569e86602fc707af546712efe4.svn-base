@@ -1,0 +1,332 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using System.Xml;
+using System.Runtime.Serialization;
+
+namespace BDSoft.Common
+{
+    public interface IAddRange
+    {
+        void AddRange(ArrayList collection);
+    }
+
+    public interface IReSetValue
+    {
+        void ReSetValue(ArrayList collection);
+    }
+
+    /// <summary>
+    /// 迭代器
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    [Serializable]
+    public class BEnumerator<T> : IEnumerator<T>
+    {
+        int curIndex;
+        T curObj;
+        protected IList<T> lstObj;
+        public BEnumerator(IList<T> LstObj)
+        {
+            lstObj = LstObj;
+            curIndex = -1;
+            if (lstObj == null)
+                return;
+            curObj = default(T);
+        }
+
+        public T Current
+        {
+            get { return curObj; }
+        }
+
+        public void Dispose()
+        {
+        }
+
+        object IEnumerator.Current
+        {
+            get { return Current; }
+        }
+
+        public bool MoveNext()
+        {
+            if (++curIndex >= lstObj.Count)
+                return false;
+
+            curObj = lstObj[curIndex];
+            return true;
+        }
+
+        public void Reset()
+        {
+            curIndex = -1;
+        }
+    }
+
+    [Serializable]
+    public class BasicQueue<T> :ADisposableExtend, IAddRange, ICloneable, IReSetValue, IEnumerable<T>, IList where T : class
+    {
+        protected List<T> lstData;
+        public T this[int index]
+        {
+            get
+            {
+                if (index < 0||index>=lstData.Count)
+                    return null;
+                return lstData[index];
+            }
+        }
+
+        public BasicQueue()
+        {
+            lstData = new List<T>();
+        }
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return new BEnumerator<T>(lstData);
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return new BEnumerator<T>(lstData);
+        }
+
+        public void AddRange(T[] collection)
+        {
+            foreach (T t in collection)
+            {
+                if (t == null)
+                    continue;
+                this.Add(t);
+            }
+        }
+
+        public void AddRange(ArrayList collection)
+        {
+            foreach (object item in collection)
+            {
+                T t = item as T;
+                if (t == null)
+                    continue;
+                this.Add(t);
+            }
+        }
+
+        public void ReSetValue(ArrayList collection)
+        {
+            if (lstData != null)
+                lstData.Clear();
+            foreach (object item in collection)
+            {
+                T t = item as T;
+                if (t == null)
+                    continue;
+                this.Add(t);
+            }
+        }
+
+        public void Add(T item)
+        {
+            if (lstData == null)
+                lstData = new List<T>();
+            //IParent<T> pt = item as IParent<T>;
+            //if (pt != null)
+            //    pt.Parent = this;
+
+            lstData.Add(item);
+        }
+
+        public bool Remove(T item)
+        {
+            if (lstData.Contains(item))
+            {
+                lstData.Remove(item);
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool RemoveAt(int index)
+        {
+            if (index <= lstData.Count - 1)
+            {
+                lstData.RemoveAt(index);
+                return true;
+            }
+
+            return false;
+        }
+
+        public int IndexOf(T t)
+        {
+            for (int i = 0; i < lstData.Count; i++)
+            {
+                T item = lstData[i];
+                if (item.Equals(t))
+                    return i;
+            }
+            return -1;
+        }
+
+        public void Insert(int index, T item)
+        {
+            if (index <= lstData.Count)
+                lstData.Insert(index, item);
+        }
+
+        #region IList
+
+        int IList.Add(object value)
+        {
+            T t = value as T;
+            if (t != null)
+            {
+                this.Add(t);
+                return lstData.Count - 1;
+            }
+            return -1;
+        }
+
+        bool IList.Contains(object value)
+        {
+            T t = value as T;
+            if (t != null)
+            {
+                if (lstData.Contains(t))
+                    return true;
+            }
+            return false;
+        }
+
+        int IList.IndexOf(object value)
+        {
+            T t = value as T;
+            if (t != null)
+            {
+                return this.IndexOf(t);
+            }
+
+            return -1;
+        }
+
+        void IList.Insert(int index, object value)
+        {
+            T t = value as T;
+            if (t != null)
+            {
+                if (index <= lstData.Count - 1)
+                    lstData.Insert(index, t);
+            }
+        }
+
+        void IList.Remove(object value)
+        {
+            T t = value as T;
+            if (t != null)
+            {
+                if (lstData.Contains(t))
+                    lstData.Remove(t);
+            }
+        }
+
+        public bool IsReadOnly
+        {
+            get { return false; }
+        }
+
+        public bool IsFixedSize
+        {
+            get { return false; }
+        }
+
+        void IList.RemoveAt(int index)
+        {
+            if (index <= lstData.Count - 1)
+                lstData.RemoveAt(index);
+        }
+
+        public void CopyTo(Array array, int index)
+        {
+            List<T> lstT = new List<T>();
+            lstT.ToArray();
+            foreach (object item in lstData)
+            {
+                T t = item as T;
+                if (t != null)
+                    lstT.Add(t);
+            }
+
+            T[] tAry = new T[lstData.Count];
+            lstT.CopyTo(tAry, index);
+
+            array = tAry;
+        }
+
+        public T[] ToArray()
+        {
+            return lstData.ToArray();
+        }
+
+        public bool IsSynchronized
+        {
+            get { return false; }
+        }
+
+        public object SyncRoot
+        {
+            get { return null; }
+        }
+
+        object IList.this[int index]
+        {
+            get
+            {
+                return this[index];
+            }
+            set
+            {
+            }
+        }
+
+        public void Clear()
+        {
+            if (lstData == null)
+                return;
+            lstData.Clear();
+        }
+
+        public int Count
+        {
+            get { return lstData.Count; }
+        }
+
+        #endregion
+
+        public override string ToString()
+        {
+            string strResult = "";
+            foreach (T item in lstData)
+            {
+                if (item == null)
+                    continue;
+                if (!string.IsNullOrEmpty(strResult))
+                    strResult += ",";
+                strResult += item.ToString();
+            }
+            return strResult;
+        }
+
+        public object Clone()
+        {
+           return PublicMethods.DeepClone(this);
+        }
+    }
+}
