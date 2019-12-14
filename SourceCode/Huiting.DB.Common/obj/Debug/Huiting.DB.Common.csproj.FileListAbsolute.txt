@@ -1,0 +1,6 @@
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DB.Common\obj\Debug\Huiting.DB.Common.csproj.CoreCompileInputs.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DB.Common\bin\Debug\Huiting.DB.Common.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DB.Common\bin\Debug\Huiting.DB.Common.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DB.Common\obj\Debug\Huiting.DB.Common.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DB.Common\obj\Debug\Huiting.DB.Common.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DB.Common\obj\Debug\Huiting.DB.Common.csprojAssemblyReference.cache

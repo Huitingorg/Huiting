@@ -163,14 +163,6 @@
       <Project>{644638b2-bcf7-4c9b-b2a3-a0448b1613ca}</Project>
       <Name>Huiting.Components</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Huiting.Contract\Huiting.Contract.csproj">
-      <Project>{73fa6641-ba32-4f10-9ab8-cd41da69f32a}</Project>
-      <Name>Huiting.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Huiting.DBAccess\Huiting.DBAccess.csproj">
-      <Project>{41a59410-9945-4609-8ca2-8a8e2a2f08a1}</Project>
-      <Name>Huiting.DBAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Huiting.ExcelOperation\Huiting.ExcelOperation.csproj">
       <Project>{a2072bff-a201-4b69-ba1b-cda4c3f2e80d}</Project>
       <Name>Huiting.ExcelOperation</Name>

@@ -1,0 +1,13 @@
+E:\CSharpProject\work\HuitingReserveAnalysis\Release\Bin\Huiting.ExcelOperation.exe
+E:\CSharpProject\work\HuitingReserveAnalysis\Release\Bin\Huiting.ExcelOperation.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.Test.ExcelWriteTestForm.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.ExcelViewControl.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.ExcelFileReadToDataSetTest.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.ExcelViewControlTest.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.ExcelFileOutPutToHTMLTest.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.Properties.Resources.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.csproj.GenerateResource.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.csproj.CoreCompileInputs.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.csproj.CopyComplete
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.exe
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.pdb

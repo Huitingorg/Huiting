@@ -1,0 +1,12 @@
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\bin\Debug\Nlog.config
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\bin\Debug\Huiting.Common.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\bin\Debug\Huiting.Common.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\bin\Debug\NLog.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\bin\Debug\NLog.xml
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.Properties.Resources.resources
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.csproj.GenerateResource.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.csproj.CoreCompileInputs.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.csproj.CopyComplete
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Common\obj\Debug\Huiting.Common.csprojAssemblyReference.cache

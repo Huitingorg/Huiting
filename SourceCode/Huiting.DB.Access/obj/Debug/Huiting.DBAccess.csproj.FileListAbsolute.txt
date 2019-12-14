@@ -1,0 +1,12 @@
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Huiting.DBAccess.dll.config
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Huiting.DBAccess.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Huiting.DBAccess.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Dapper.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Newtonsoft.Json.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\System.Data.SQLite.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Dapper.xml
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\bin\Debug\Newtonsoft.Json.xml
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\obj\Debug\Huiting.DBAccess.csproj.CoreCompileInputs.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\obj\Debug\Huiting.DBAccess.csproj.CopyComplete
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\obj\Debug\Huiting.DBAccess.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.DBAccess\obj\Debug\Huiting.DBAccess.pdb

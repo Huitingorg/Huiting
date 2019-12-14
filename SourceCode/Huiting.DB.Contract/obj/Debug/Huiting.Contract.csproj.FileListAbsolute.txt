@@ -1,0 +1,15 @@
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\obj\Debug\Huiting.Contract.csprojAssemblyReference.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\obj\Debug\Huiting.Contract.csproj.CoreCompileInputs.cache
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Huiting.Contract.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Huiting.Contract.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Huiting.DBAccess.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Newtonsoft.Json.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\System.Data.SQLite.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Dapper.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Huiting.DBAccess.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Huiting.DBAccess.dll.config
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Newtonsoft.Json.xml
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\bin\Debug\Dapper.xml
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\obj\Debug\Huiting.Contract.csproj.CopyComplete
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\obj\Debug\Huiting.Contract.dll
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.Contract\obj\Debug\Huiting.Contract.pdb
