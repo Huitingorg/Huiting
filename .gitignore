@@ -1,1 +1,16 @@
 SourceCode/packages/
+/Release/Bin/de
+/Release/Bin/es
+/Release/Bin/ja
+/Release/Bin/Logs
+/Release/Bin/ru
+/SourceCode/Huiting.Components/obj/Debug
+/SourceCode/Huiting.DataEditor/bin/Debug/de
+/SourceCode/Huiting.DataEditor/bin/Debug/ja
+/SourceCode/Huiting.DataEditor/bin/Debug/es
+/SourceCode/Huiting.DataEditor/bin/Debug/ru
+/SourceCode/Huiting.DataEditor/obj/Debug
+/Release/Bin
+/SourceCode/Huiting.Common/obj/Debug/TempPE
+/SourceCode/Huiting.Common/bin/Debug
+/SourceCode/Huiting.DataEditor/bin/Debug
