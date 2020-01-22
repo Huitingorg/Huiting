@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing.Drawing2D;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     [ToolboxItem(true)]
     [ToolboxBitmap(typeof(TextBox))]

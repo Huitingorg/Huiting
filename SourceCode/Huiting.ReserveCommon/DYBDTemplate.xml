@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="gb2312"?>
+<DrawBiaoDing>
+  <OffsetBorderColor>-65536</OffsetBorderColor>
+  <OffsetBorderWidth>1</OffsetBorderWidth>
+  <CornerRectWidth>5</CornerRectWidth>
+  <ChartFont>
+    <Name>微软雅黑</Name>
+    <Style>Regular</Style>
+    <Size>10</Size>
+    <Color>-16777216</Color>
+  </ChartFont>
+  <KeyAndValueDistance>5</KeyAndValueDistance>
+  <BorderColor>-16777216</BorderColor>
+  <BorderStyle>Solid</BorderStyle>
+  <BorderWidth>1</BorderWidth>
+  <BorderVisible>True</BorderVisible>
+  <BackColorTransparent>False</BackColorTransparent>
+  <BackColor>-1</BackColor>
+  <Padding>5,5,5,5</Padding>
+  <Visible>False</Visible>
+</DrawBiaoDing>

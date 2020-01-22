@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EF2EE83-6F76-41DE-9518-1380A222C3C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReserveAnalysis</RootNamespace>
+    <AssemblyName>ReserveAnalysis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Release\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>reserve32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BDControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\BDControl.dll</HintPath>
+    </Reference>
+    <Reference Include="BDSoft.Common, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\BDSoft.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BDSoft.Components, Version=1.0.0.2, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\BDSoft.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="BDSoft.DBAccess, Version=2.0.0.3, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\BDSoft.DBAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.Data.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.Office.v13.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\DevExpress.Printing.v13.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v13.1.Core, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.Spreadsheet.v13.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.Utils.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.XtraBars.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.XtraEditors.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.1, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.XtraLayout.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v13.1, Version=13.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress_Winform_Controls_13.1.12.1.0.0\lib\DevExpress.XtraSpreadsheet.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\DevExpress.XtraTreeList.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="HelpInfoManage, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\HelpInfoManage.exe</HintPath>
+    </Reference>
+    <Reference Include="RemoteSeviceOp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\Bin\RemoteSeviceOp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.APIs, Version=1.0.3386.30172, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Runtime.InteropServices.APIs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.TreeListView, Version=1.0.3393.25113, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.TreeListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.5.0.20974, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DrawElement\GroupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawElement\GroupTitlePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawElement\IconItemPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawElement\UnitFreeLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawElement\UnitGroupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawElement\UnitNavigationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DYChartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DYChartWindow.Designer.cs">
+      <DependentUpon>DYChartWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChart.Designer.cs">
+      <DependentUpon>FrmChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDefaultValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDefaultValue.Designer.cs">
+      <DependentUpon>FrmDefaultValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLeft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLeft.Designer.cs">
+      <DependentUpon>FrmLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewProject.Designer.cs">
+      <DependentUpon>FrmNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForecastOutPut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForecastOutPut.Designer.cs">
+      <DependentUpon>FrmForecastOutPut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTranslucent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWorkbench.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWorkbench.Designer.cs">
+      <DependentUpon>FrmWorkbench.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpAppRegClass.cs" />
+    <Compile Include="OpNotifyMessageClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DYChartWindow.resx">
+      <DependentUpon>DYChartWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChart.resx">
+      <DependentUpon>FrmChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDefaultValue.resx">
+      <DependentUpon>FrmDefaultValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLeft.resx">
+      <DependentUpon>FrmLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewProject.resx">
+      <DependentUpon>FrmNewProject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForecastOutPut.resx">
+      <DependentUpon>FrmForecastOutPut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTranslucent.resx">
+      <DependentUpon>FrmTranslucent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWorkbench.resx">
+      <DependentUpon>FrmWorkbench.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AJRChart.JrChartU\AJRChart.JrChartU.csproj">
+      <Project>{279abba2-c05b-42d3-91ec-f9763e656e15}</Project>
+      <Name>AJRChart.JrChartU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AJRChart\AJRChart.csproj">
+      <Project>{b0b7d633-a72f-49e3-97ab-e2203345cc33}</Project>
+      <Name>AJRChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataEdit\DataEdit.csproj">
+      <Project>{0cc5a33a-a809-4bd3-8c8a-096366164c32}</Project>
+      <Name>DataEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataImport\DataImport.csproj">
+      <Project>{1139c093-0f33-4cf8-b898-ff9d6d90b8a8}</Project>
+      <Name>DataImport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EconomicEvaluation\EconomicEvaluation.csproj">
+      <Project>{77336a6d-3192-4ce2-8edf-c8947b7b5551}</Project>
+      <Name>EconomicEvaluation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocalDataService\LocalDataService.csproj">
+      <Project>{f8cb4933-9008-4f43-842c-88a18fbde451}</Project>
+      <Name>LocalDataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReserveAnalysisResult\ReserveAnalysisResult.csproj">
+      <Project>{60e2f321-801e-4cc4-ade8-f79a6c3e64a1}</Project>
+      <Name>ReserveAnalysisResult</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReserveChartExpand\ReserveChartExpand.csproj">
+      <Project>{10663b67-924d-4206-a601-705f7af5aafa}</Project>
+      <Name>ReserveChartExpand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReserveChart\ReserveChart.csproj">
+      <Project>{e0ef238d-4480-4c2b-b805-db566e520840}</Project>
+      <Name>ReserveChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReserveCommon\ReserveCommon.csproj">
+      <Project>{de3e6b4c-a4e1-4647-a903-c02e00a29fb6}</Project>
+      <Name>ReserveCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReserveComponents\ReserveComponents.csproj">
+      <Project>{48844292-f721-4198-b831-d3cdd163c1ac}</Project>
+      <Name>ReserveComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WaterDriveLib\WaterDriveLib.csproj">
+      <Project>{ea45b11c-1a57-4f86-b641-9cf9e4c0642a}</Project>
+      <Name>WaterDriveLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserve32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工具.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\动态法.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\经济评价.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\剪刀.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\编辑模板.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\汇总.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\静态法_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\局部放大.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\帮助16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\应用.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\递减状态窗口.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数据表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\全屏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导入excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\放大16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\缩小16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文件导入.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\粘贴16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\滚轮缩放.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上移一格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\复制16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\搜索16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建资产.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\单井分析.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下移一格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选单点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\去单点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左移一页.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右移一页.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customFormula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\预测结果.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除资产.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左一格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右一格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\构成分析.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\构成分析1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\标定信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\参数.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurrence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\单元6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方框选点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\递减.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\批注.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\拖动线1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\横线选点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\竖线选点点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方框去点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\插入活动点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y轴.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\横线去点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\竖线去点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAsPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数据查看16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数据导入SQL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\曲线标题设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletePoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\units.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserve.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserve16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\units16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\units16_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floder_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\常规递减单元%281201032%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueFloder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jjpjcs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map2_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongXiangZhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YuCeChangLiang_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BasicInfo_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataTable_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fenXi_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purpleFloder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laQiFenXI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minGanXingFenXi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danJing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\竖线选点点2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\竖线去点2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_12x12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="reserve32.ico" />
+    <None Include="Resources\timg.jpg" />
+    <None Include="Resources\alignverticalright2_16x16.png" />
+    <None Include="Resources\alignverticalright2_32x32.png" />
+    <None Include="Resources\chartsshowlegend_16x16.png" />
+    <None Include="Resources\chartsshowlegend_32x32.png" />
+    <None Include="Resources\kpi_16x16.png" />
+    <None Include="Resources\kpi_32x32.png" />
+    <None Include="Resources\drilldownonarguments_chart_16x16.png" />
+    <None Include="Resources\drilldownonarguments_chart_32x32.png" />
+    <None Include="Resources\Cover.png" />
+    <None Include="Resources\icon_16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

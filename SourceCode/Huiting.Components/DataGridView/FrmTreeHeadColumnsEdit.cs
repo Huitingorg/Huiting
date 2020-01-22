@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     public partial class FrmTreeHeadColumnsEdit : Form
     {

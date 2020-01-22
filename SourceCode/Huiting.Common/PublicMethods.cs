@@ -368,7 +368,7 @@ namespace Huiting.Common
 			return lstText;
 		}
 
-		public static List<string> GetLstString<T>(List<T> lstT, string propertyName)
+		public static List<string> GetLstString<T>(IEnumerable<T> lstT, string propertyName)
 		{
 			List<string> lstStr = new List<string>();
 			Type type = typeof(T);
@@ -1248,64 +1248,68 @@ namespace Huiting.Common
 			return CreateNewName(lstAry.ToArray(), Prefix, "");
 		}
 
-		public static string CreateNewName(string[] fileAry, string Prefix)
-		{
-			return CreateNewName(fileAry, Prefix, "");
-		}
 
-		public static string CreateNewName(string[] fileAry, string Prefix, string Suffix)
-		{
-			string RegexStr;
 
-			if (!string.IsNullOrEmpty(Suffix) && !Suffix.StartsWith("."))
-				Suffix = "." + Suffix;
+        public static string CreateNewName(string[] fileAry, string Prefix, string Suffix = "")
+        {
+            int index = CreateNewNameIndex(fileAry, Prefix, Suffix);
 
-			if (string.IsNullOrEmpty(Suffix))
-				RegexStr = "^" + Prefix + "[0-9]+";
-			else
-				RegexStr = "^" + Prefix + "[0-9]+" + Suffix + "$";
+            return string.Format(Prefix + "{0}" + Suffix, index);
+        }
 
-			List<int> lstFileNum = new List<int>();
-			int intCount = 0;
-			for (int i = 0; i < fileAry.Length; i++)
-			{
-				string fileName = Path.GetFileName(fileAry[i]);
-				string[] fileNames = PublicMethods.GetResultAryByRegex(fileName, RegexStr, true);
-				//如果小于或等于0，表示不满足要求
-				if (fileNames.Length <= 0)
-					continue;
-				int intLen = fileNames[0].Length;
-				string fileNum = fileNames[0].Substring(Prefix.Length, fileNames[0].Length - Prefix.Length - Suffix.Length);
-				int curValue;
-				if (int.TryParse(fileNum, out curValue))
-					lstFileNum.Add(curValue);
-			}
+        public static int CreateNewNameIndex(string[] fileAry, string Prefix, string Suffix = "")
+        {
+            string RegexStr;
 
-			if (lstFileNum.Count == 0)
-				intCount = 1;
-			else
-			{
-				for (int i = 0; i < lstFileNum.Count; i++)
-				{
-					intCount = i + 1;
-					if (!lstFileNum.Contains(intCount))
-						break;
-					if (i == lstFileNum.Count - 1)
-						intCount++;
-				}
-			}
+            if (!string.IsNullOrEmpty(Suffix) && !Suffix.StartsWith("."))
+                Suffix = "." + Suffix;
 
-			return string.Format(Prefix + "{0}" + Suffix, intCount);
-		}
+            if (string.IsNullOrEmpty(Suffix))
+                RegexStr = "^" + Prefix + "[0-9]+";
+            else
+                RegexStr = "^" + Prefix + "[0-9]+" + Suffix + "$";
 
-		#endregion
+            List<int> lstFileNum = new List<int>();
+            int intCount = 0;
+            for (int i = 0; i < fileAry.Length; i++)
+            {
+                string fileName = Path.GetFileName(fileAry[i]);
+                string[] fileNames = PublicMethods.GetResultAryByRegex(fileName, RegexStr, true);
+                //如果小于或等于0，表示不满足要求
+                if (fileNames.Length <= 0)
+                    continue;
+                int intLen = fileNames[0].Length;
+                string fileNum = fileNames[0].Substring(Prefix.Length, fileNames[0].Length - Prefix.Length - Suffix.Length);
+                int curValue;
+                if (int.TryParse(fileNum, out curValue))
+                    lstFileNum.Add(curValue);
+            }
 
-		#region 序列化与反序列化
+            if (lstFileNum.Count == 0)
+                intCount = 1;
+            else
+            {
+                for (int i = 0; i < lstFileNum.Count; i++)
+                {
+                    intCount = i + 1;
+                    if (!lstFileNum.Contains(intCount))
+                        break;
+                    if (i == lstFileNum.Count - 1)
+                        intCount++;
+                }
+            }
 
-		/// <summary>
-		/// 指定除根目录下的序列化路径
-		/// </summary>
-		public class SerializeBinder : SerializationBinder
+            return intCount;
+        }
+
+        #endregion
+
+        #region 序列化与反序列化
+
+        /// <summary>
+        /// 指定除根目录下的序列化路径
+        /// </summary>
+        public class SerializeBinder : SerializationBinder
 		{
 			string dllBackUpPath;
 			public SerializeBinder(string PDllBackUpPath)
@@ -2635,11 +2639,32 @@ namespace Huiting.Common
 			return false;
 		}
 
-		#endregion
+        #endregion
 
-		#region Sql 的 in 处理
+        #region Sql 的 in 处理
 
-		public static string GetSqlPart(string fieldName, List<string> lstFieldValues, bool isIn)
+        public static string GetSqlPartByLike(string keyWord, List<string> displayItems)
+        {
+            string sqlPart = null;
+            string connectedStr = "or ";
+
+            StringBuilder sb = new StringBuilder();
+            displayItems.ForEach(x => sb.Append($" {x} like '%{keyWord}%' or"));
+            sb.Remove(sb.Length - connectedStr.Length, connectedStr.Length);
+
+            if (displayItems.Count > 0)
+            {
+                sqlPart = "and ";
+                if (displayItems.Count == 1)
+                    sqlPart = $"{sqlPart} {sb.ToString()}";
+                else
+                    sqlPart = $"{sqlPart} ({sb.ToString()})";
+            }
+
+            return sqlPart;
+        }
+
+        public static string GetSqlPartByIn(string fieldName, List<string> lstFieldValues, bool isIn)
 		{
 			int manyTimes = 0;
 			int inCount = 500;
@@ -3222,5 +3247,7 @@ namespace Huiting.Common
 
 			return dict;
 		}
+
+
 	}
 }

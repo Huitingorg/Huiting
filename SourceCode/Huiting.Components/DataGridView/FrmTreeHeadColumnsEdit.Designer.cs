@@ -1,4 +1,4 @@
-﻿namespace BDSoft.Components
+﻿namespace Huiting.Components
 {
     partial class FrmTreeHeadColumnsEdit
     {
@@ -32,7 +32,7 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("复杂表头");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTreeHeadColumnsEdit));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.treeView1 = new BDSoft.Components.TreeViewByRightSelected();
+            this.treeView1 = new Huiting.Components.TreeViewByRightSelected();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDelete2 = new System.Windows.Forms.Button();
             this.btnAddSub = new System.Windows.Forms.Button();
@@ -297,7 +297,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnUp;
-        private BDSoft.Components.TreeViewByRightSelected treeView1;
+        private Huiting.Components.TreeViewByRightSelected treeView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddSub;
         private System.Windows.Forms.Button btnDelete2;

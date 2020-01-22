@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comb_Sheets = new System.Windows.Forms.ComboBox();
-            this.tabControlEx1 = new BDSoft.Components.RoundedTabControl();
+            this.tabControlEx1 = new Huiting.Components.RoundedTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listView_FieldList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,6 +46,7 @@
             this.btn_OK = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.num_ColumnRowsCount)).BeginInit();
             this.tabControlEx1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -53,9 +54,10 @@
             // 
             // btn_AutoPP
             // 
-            this.btn_AutoPP.Location = new System.Drawing.Point(412, 4);
+            this.btn_AutoPP.Location = new System.Drawing.Point(549, 6);
+            this.btn_AutoPP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AutoPP.Name = "btn_AutoPP";
-            this.btn_AutoPP.Size = new System.Drawing.Size(75, 23);
+            this.btn_AutoPP.Size = new System.Drawing.Size(100, 34);
             this.btn_AutoPP.TabIndex = 11;
             this.btn_AutoPP.Text = "自动匹配";
             this.btn_AutoPP.UseVisualStyleBackColor = true;
@@ -63,9 +65,10 @@
             // 
             // num_ColumnRowsCount
             // 
-            this.num_ColumnRowsCount.Location = new System.Drawing.Point(336, 5);
+            this.num_ColumnRowsCount.Location = new System.Drawing.Point(448, 10);
+            this.num_ColumnRowsCount.Margin = new System.Windows.Forms.Padding(4);
             this.num_ColumnRowsCount.Name = "num_ColumnRowsCount";
-            this.num_ColumnRowsCount.Size = new System.Drawing.Size(70, 21);
+            this.num_ColumnRowsCount.Size = new System.Drawing.Size(93, 26);
             this.num_ColumnRowsCount.TabIndex = 10;
             this.num_ColumnRowsCount.Value = new decimal(new int[] {
             1,
@@ -76,27 +79,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 9);
+            this.label2.Location = new System.Drawing.Point(321, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 12);
+            this.label2.Size = new System.Drawing.Size(113, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "表头所占行数：";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 9);
+            this.label1.Location = new System.Drawing.Point(23, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 12);
+            this.label1.Size = new System.Drawing.Size(104, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "选择sheet页：";
             // 
             // comb_Sheets
             // 
             this.comb_Sheets.FormattingEnabled = true;
-            this.comb_Sheets.Location = new System.Drawing.Point(100, 6);
+            this.comb_Sheets.Location = new System.Drawing.Point(133, 10);
+            this.comb_Sheets.Margin = new System.Windows.Forms.Padding(4);
             this.comb_Sheets.Name = "comb_Sheets";
-            this.comb_Sheets.Size = new System.Drawing.Size(121, 20);
+            this.comb_Sheets.Size = new System.Drawing.Size(160, 26);
             this.comb_Sheets.TabIndex = 7;
             // 
             // tabControlEx1
@@ -105,19 +111,21 @@
             this.tabControlEx1.BackColor = System.Drawing.Color.Transparent;
             this.tabControlEx1.BaseColor = System.Drawing.Color.White;
             this.tabControlEx1.Controls.Add(this.tabPage2);
-            this.tabControlEx1.Location = new System.Drawing.Point(12, 33);
+            this.tabControlEx1.Location = new System.Drawing.Point(16, 50);
+            this.tabControlEx1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlEx1.Name = "tabControlEx1";
             this.tabControlEx1.SelectedIndex = 0;
-            this.tabControlEx1.Size = new System.Drawing.Size(698, 368);
+            this.tabControlEx1.Size = new System.Drawing.Size(931, 552);
             this.tabControlEx1.TabIndex = 12;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.listView_FieldList);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(690, 338);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(923, 518);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "字段对应设置";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -131,9 +139,11 @@
             this.columnHeader4});
             this.listView_FieldList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_FieldList.FullRowSelect = true;
-            this.listView_FieldList.Location = new System.Drawing.Point(3, 3);
+            this.listView_FieldList.HideSelection = false;
+            this.listView_FieldList.Location = new System.Drawing.Point(4, 4);
+            this.listView_FieldList.Margin = new System.Windows.Forms.Padding(4);
             this.listView_FieldList.Name = "listView_FieldList";
-            this.listView_FieldList.Size = new System.Drawing.Size(684, 332);
+            this.listView_FieldList.Size = new System.Drawing.Size(915, 510);
             this.listView_FieldList.SmallImageList = this.imageList1;
             this.listView_FieldList.TabIndex = 0;
             this.listView_FieldList.UseCompatibleStateImageBehavior = false;
@@ -169,9 +179,10 @@
             // 
             // btn_OK
             // 
-            this.btn_OK.Location = new System.Drawing.Point(282, 410);
+            this.btn_OK.Location = new System.Drawing.Point(376, 615);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(4);
             this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(75, 23);
+            this.btn_OK.Size = new System.Drawing.Size(100, 34);
             this.btn_OK.TabIndex = 13;
             this.btn_OK.Text = "确定";
             this.btn_OK.UseVisualStyleBackColor = true;
@@ -179,9 +190,10 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(363, 410);
+            this.btn_Cancel.Location = new System.Drawing.Point(484, 615);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 34);
             this.btn_Cancel.TabIndex = 14;
             this.btn_Cancel.Text = "取消";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -191,18 +203,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(19, 408);
+            this.label3.Location = new System.Drawing.Point(25, 612);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 12);
+            this.label3.Size = new System.Drawing.Size(203, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "附：红色项必须设置对应关系";
             // 
             // ExcelFiledMappingConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(721, 456);
+            this.ClientSize = new System.Drawing.Size(961, 684);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.btn_Cancel);
@@ -212,6 +224,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comb_Sheets);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ExcelFiledMappingConfig";
@@ -234,7 +247,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comb_Sheets;
-        private BDSoft.Components.RoundedTabControl tabControlEx1;
+        private Huiting.Components.RoundedTabControl tabControlEx1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_OK;
         private System.Windows.Forms.Button btn_Cancel;
@@ -245,5 +258,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

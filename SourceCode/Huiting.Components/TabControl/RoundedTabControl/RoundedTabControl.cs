@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.ComponentModel;
 using System.Drawing.Text;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     /* 作者：Starts_2000
      * 日期：2009-08-25

@@ -4,7 +4,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Drawing;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     internal class NativeMethods1
     {

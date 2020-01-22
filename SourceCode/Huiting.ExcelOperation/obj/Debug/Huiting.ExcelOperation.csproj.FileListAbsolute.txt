@@ -11,3 +11,4 @@ E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\o
 E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.csproj.CopyComplete
 E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.exe
 E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.pdb
+E:\CSharpProject\work\HuitingReserveAnalysis\SourceCode\Huiting.ExcelOperation\obj\Debug\Huiting.ExcelOperation.csprojAssemblyReference.cache

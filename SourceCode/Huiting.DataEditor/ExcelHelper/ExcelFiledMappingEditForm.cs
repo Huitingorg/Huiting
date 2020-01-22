@@ -1,4 +1,6 @@
 ﻿
+using DevExpress.XtraEditors;
+using Huiting.DevComponents;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Huiting.DataEditor.ExcelHelper
 {
-    public partial class ExcelFiledMappingEditForm : Form
+    public partial class ExcelFiledMappingEditForm : DevXtraForm
     {
         DataTable curTable = null;
         int HeadRowsCount = 1;

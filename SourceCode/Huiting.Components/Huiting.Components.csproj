@@ -74,11 +74,8 @@
     <Compile Include="DoubleProgressFrom\DoubleProgressFrom.Designer.cs">
       <DependentUpon>DoubleProgressFrom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="DrawPanel\IconItemPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="NumberBox\BDNumBoxEx.cs">
       <SubType>Component</SubType>
@@ -169,6 +166,9 @@
     <Compile Include="UctStatusBar.Designer.cs">
       <DependentUpon>UctStatusBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlByInheritScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl\UctBottom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,9 +210,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DrawPanel\MousePanel.resx">
       <DependentUpon>MousePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmChild.resx">
       <DependentUpon>FrmChild.cs</DependentUpon>
@@ -301,6 +298,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

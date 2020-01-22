@@ -1,5 +1,7 @@
 ﻿
+using DevExpress.XtraEditors;
 using Huiting.Common;
+using Huiting.DevComponents;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Huiting.DataEditor.ExcelHelper
 {
-    public partial class ExcelTempleateGetForm : Form
+    public partial class ExcelTempleateGetForm : DevXtraForm //Form
     {
         public string SavePath = string.Empty;
         public ExcelTempleateGetForm()
@@ -36,19 +38,19 @@ namespace Huiting.DataEditor.ExcelHelper
             //单元资产
             if(checkBox1.Checked)
             {
-                sourcePath = Application.StartupPath + "//数据模板//模板_单元基本信息.xls";
+                sourcePath = Application.StartupPath + "//DataTemplates//模板_单元基本信息.xls";
                 File.Copy(sourcePath, SavePath+"//模板_单元基本信息.xls", true);
             }
             //单元开发数据
             if (checkBox2.Checked)
             {
-                sourcePath = Application.StartupPath + "//数据模板//模板_单元开发数据.xls";
+                sourcePath = Application.StartupPath + "//DataTemplates//模板_单元开发数据.xls";
                 File.Copy(sourcePath, SavePath + "//模板_单元开发数据.xls", true);
             }
             //开井开发数据
             if (checkBox3.Checked)
             {
-                sourcePath = Application.StartupPath + "//数据模板//模板_单井开发数据.xls";
+                sourcePath = Application.StartupPath + "//DataTemplates//模板_单井开发数据.xls";
                 File.Copy(sourcePath, SavePath + "//模板_单井开发数据.xls", true);
             }
             PublicMethods.TipsMessageBox(this, "保存成功！");

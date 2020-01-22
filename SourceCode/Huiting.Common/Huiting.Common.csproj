@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="BasicQueue.cs" />
     <Compile Include="ChineseToPinYin.cs" />
+    <Compile Include="DataGridViewBehaviors.cs" />
     <Compile Include="ICopy.cs" />
     <Compile Include="Debuger.cs" />
     <Compile Include="EnumAttrDict.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Log.cs" />
     <Compile Include="MessageBoxEx.cs" />
     <Compile Include="ObjectConvert.cs" />
+    <Compile Include="ObjectChildItemSetter.cs" />
     <Compile Include="ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebPublicMethods.cs" />

@@ -33,7 +33,7 @@ namespace Huiting.ExcelOperation
                 this.FilePath = ofd.FileName;
                 //获取数据集
                 ExcelReadClass m_ExcelReadClass = new ExcelReadClass();
-                DataSet ds = m_ExcelReadClass.GetExcelDataSet(this.FilePath, false);
+                DataSet ds = m_ExcelReadClass.GetExcelDataSet(this.FilePath);
                 //展示数据集
                 this.tabControl1.TabPages.Clear();
                 foreach (DataTable dt in ds.Tables)
@@ -50,7 +50,10 @@ namespace Huiting.ExcelOperation
             }
         }
 
-      
-       
+
+
+
+
+
     }
 }

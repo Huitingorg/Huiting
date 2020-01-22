@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     public class CollapsibleSplitter : Splitter
     {

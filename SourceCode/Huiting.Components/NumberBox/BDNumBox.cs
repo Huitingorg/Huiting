@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     [ToolboxItem(true)]
     [ToolboxBitmap(typeof(TextBox))]

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Huiting.Common;
 
-namespace BDSoft.Components
+namespace Huiting.Components.DrawPanel
 {
     public class FontMousePanel : MousePanel
     {

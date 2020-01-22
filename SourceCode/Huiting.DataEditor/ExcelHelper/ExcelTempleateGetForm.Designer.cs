@@ -42,9 +42,10 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(20, 30);
+            this.checkBox1.Location = new System.Drawing.Point(27, 45);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(120, 16);
+            this.checkBox1.Size = new System.Drawing.Size(150, 22);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "单元资产导入模板";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(20, 52);
+            this.checkBox2.Location = new System.Drawing.Point(27, 78);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(144, 16);
+            this.checkBox2.Size = new System.Drawing.Size(180, 22);
             this.checkBox2.TabIndex = 0;
             this.checkBox2.Text = "单元开发数据导入模板";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -66,9 +68,10 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(20, 74);
+            this.checkBox3.Location = new System.Drawing.Point(27, 111);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(144, 16);
+            this.checkBox3.Size = new System.Drawing.Size(180, 22);
             this.checkBox3.TabIndex = 0;
             this.checkBox3.Text = "单井开发数据导入模板";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -78,18 +81,21 @@
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 111);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(559, 166);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "请选择导出模板明细";
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(237, 130);
+            this.btn_Cancel.Location = new System.Drawing.Point(316, 195);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 34);
             this.btn_Cancel.TabIndex = 2;
             this.btn_Cancel.Text = "取消";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // 
             // btn_Export
             // 
-            this.btn_Export.Location = new System.Drawing.Point(156, 130);
+            this.btn_Export.Location = new System.Drawing.Point(208, 195);
+            this.btn_Export.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(75, 23);
+            this.btn_Export.Size = new System.Drawing.Size(100, 34);
             this.btn_Export.TabIndex = 2;
             this.btn_Export.Text = "导出";
             this.btn_Export.UseVisualStyleBackColor = true;
@@ -107,13 +114,14 @@
             // 
             // ExcelTempleateGetForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(451, 181);
+            this.ClientSize = new System.Drawing.Size(601, 272);
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ExcelTempleateGetForm";

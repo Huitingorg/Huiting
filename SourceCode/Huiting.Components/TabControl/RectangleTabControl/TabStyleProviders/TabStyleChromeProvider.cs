@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
 	[System.ComponentModel.ToolboxItem(false)]
 	public class TabStyleChromeProvider : TabStyleProvider

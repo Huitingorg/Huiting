@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DBConfig" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DBConfig">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LocalUnitCode" type="xs:string" minOccurs="0" />
+                <xs:element name="LocalUnitName" type="xs:string" minOccurs="0" />
+                <xs:element name="DbType" type="xs:string" minOccurs="0" />
+                <xs:element name="DbUserName" type="xs:string" minOccurs="0" />
+                <xs:element name="DbUserPwd" type="xs:string" minOccurs="0" />
+                <xs:element name="DbDataBaseName" type="xs:string" minOccurs="0" />
+                <xs:element name="DbLocalServer" type="xs:string" minOccurs="0" />
+                <xs:element name="Port" type="xs:string" minOccurs="0" />
+                <xs:element name="TempleateName" type="xs:string" minOccurs="0" />
+                <xs:element name="ServerNameMode" type="xs:string" minOccurs="0" />
+                <xs:element name="Default" type="xs:string" minOccurs="0" />
+                <xs:element name="IsMSDE2005" type="xs:string" minOccurs="0" />
+                <xs:element name="UseODAC" type="xs:string" minOccurs="0" />
+                <xs:element name="WebDBAccessPath" type="xs:string" minOccurs="0" />
+                <xs:element name="SID" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <DBConfig>
+    <LocalUnitCode />
+    <LocalUnitName />
+    <DbType>210632055EE123CF</DbType>
+    <DbUserName>4D4BBE1B21ACC0A1</DbUserName>
+    <DbUserPwd>4D4BBE1B21ACC0A1</DbUserPwd>
+    <DbDataBaseName>4D4BBE1B21ACC0A1</DbDataBaseName>
+    <DbLocalServer>FB76A3EE1A91C005789BC46BA34CA592</DbLocalServer>
+    <Port>333B4DD3CBA35014</Port>
+    <TempleateName>默认</TempleateName>
+    <ServerNameMode>E3224AC57B0A2C7F</ServerNameMode>
+    <Default>1</Default>
+    <IsMSDE2005>E3224AC57B0A2C7F</IsMSDE2005>
+    <UseODAC>E3224AC57B0A2C7F</UseODAC>
+    <WebDBAccessPath />
+    <SID>E3224AC57B0A2C7F</SID>
+  </DBConfig>
+</NewDataSet>

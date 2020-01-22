@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+   <config>
+    <key>ycy</key>
+    <value>0.001</value>
+  </config>
+  <config>
+    <key>ycq</key>
+    <value>0.01</value>
+  </config>
+  <config>
+    <key>ycyl</key>
+    <value>10</value>
+  </config>
+  <config>
+    <key>pjdjycy</key>
+    <value>10</value>
+  </config>
+  <config>
+    <key>pjdjrcy</key>
+    <value>0.33</value>
+  </config>
+</DocumentElement>

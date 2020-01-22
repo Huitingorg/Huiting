@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <config>
+    <key>limitedtime</key>
+    <value>100</value>
+  </config>
+  <config>
+    <key>defaultmonthcountbyqyb</key>
+    <value>6</value>
+  </config>
+  <config>
+    <key>decpart</key>
+    <value>2</value>
+  </config>
+  <config>
+    <key>decpartcount</key>
+    <value>2</value>
+  </config>
+  <config>
+    <key>linewidth</key>
+    <value>1</value>
+  </config>
+  <config>
+    <key>pjnd</key>
+    <value>201701</value>
+  </config>
+  <config>
+    <key>ycy</key>
+    <value>10</value>
+  </config>
+  <config>
+    <key>ycq</key>
+    <value>10</value>
+  </config>
+  <config>
+    <key>ycyl</key>
+    <value>10</value>
+  </config>
+  <config>
+    <key>pjdjycy</key>
+    <value>10</value>
+  </config>
+  <config>
+    <key>pjdjrcy</key>
+    <value>0.33</value>
+  </config>
+</DocumentElement>

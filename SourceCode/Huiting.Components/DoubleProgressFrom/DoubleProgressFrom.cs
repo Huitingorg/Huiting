@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Huiting.Common;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     public partial class DoubleProgressFrom : Form
     {

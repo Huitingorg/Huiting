@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     namespace UsePredicateDelegate
     {

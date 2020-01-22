@@ -13,7 +13,7 @@ using System.Security.Permissions;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     [ToolboxBitmapAttribute(typeof(TabControl))]
     public class RectangleTabControl : TabControl

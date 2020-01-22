@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReserveCommon.BDDescriptionAttribute" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Attribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.Form1" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.GlobalInfo" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQAAAAACAAAAAAAAAAAABAAAAAQAAAAAIAAAA=</HashCode>
+      <FileName>GlobalInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.ConfigInfo" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAQgAAAgAAABAAAABAAAAARAAABAAIAAA=</HashCode>
+      <FileName>Library\ConfigInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.DictColumnInherit" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEBgAACAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\DictColumnInherit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.DefaultConfig" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAIBEAASARAAEAAAAABA=</HashCode>
+      <FileName>Library\EconomicParamDefault.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.EvaluationOptionsDefault" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAQgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Library\EconomicParamDefault.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.EconomicParamsDefault" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAQAAAQkAAgIIAgICAAIAAYAAAAGAAAAA=</HashCode>
+      <FileName>Library\EconomicParamDefault.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.QybDefault" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\EconomicParamDefault.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.IconItemData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAggAAAACCAAAAAAAAAABAAAAAAGACAAAA=</HashCode>
+      <FileName>Library\IconItemData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReserveCommon.AEntityData" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\IEntityData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReserveCommon.GroupData" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\IEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.ProjectData" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAYAAAIAAAAAAIAEAAAAEAAAAAAAQEEA=</HashCode>
+      <FileName>Library\IEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.FunctionData" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAE=</HashCode>
+      <FileName>Library\IEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.NodeEnity" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\NodeEnity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.InternalMethods" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAACABAAAAAAACAACAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Methods\InternalMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.ProductInfoQueue" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ProductQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.ProductInfo" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAACAAAAAA=</HashCode>
+      <FileName>ProductQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.Program" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.SortAttribute" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAA=</HashCode>
+      <FileName>SortAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.GroupInfo" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAMAACAAAAAEAABQDAIAUAACAAAAAA=</HashCode>
+      <FileName>SortInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReserveCommon.GroupInfoQueue" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAAAAA=</HashCode>
+      <FileName>SortInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReserveCommon.SortInfo" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAUAAAAFAAAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>SortInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.SrotInfoComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>SortInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReserveCommon.SortInfoQueue" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAAAQA=</HashCode>
+      <FileName>SortInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReserveCommon.SortTypeFactory" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>SortTypeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.Properties.Resources" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAYQQQAgARCDAAAAAAABEAAACUggAQEIIAUIBgAEHYE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReserveCommon.Properties.Settings" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ReserveCommon.IEntityData" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\IEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReserveCommon.IAssetsData" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAIAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\IEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReserveCommon.IStringConverter" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAA=</HashCode>
+      <FileName>SortInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ReserveCommon.OrganizationType" Collapsed="true">
+    <Position X="13" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAYAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.AttributeType" Collapsed="true">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.SortType" Collapsed="true">
+    <Position X="14.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAQAAQwAAAAQAAASAAAAEAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EnumYQCLX" Collapsed="true">
+    <Position X="11.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAEAAAAAAAgAAAAAAAAgAAAAAAAEAAAAIA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EnumQDLX" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAgAAAAAAEAAAAQAAAAAMQAAgEAAAFAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EnumKFFS" Collapsed="true">
+    <Position X="13" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAwgCA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EnumCLLB" Collapsed="true">
+    <Position X="11.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAIAAAAAAAACAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EnumKFZT" Collapsed="true">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EnumQBLX" Collapsed="true">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgIEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.UnitFunctionType" Collapsed="true">
+    <Position X="11.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAKAEIAAgAAAAKkCQAAAAIgAAAABIAAAAACEAggAEAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.UnitFunctionGroupType" Collapsed="true">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAAAAAAAAAAQAAECAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.EntityType" Collapsed="true">
+    <Position X="9.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAIAAACAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReserveCommon.StudyType" Collapsed="true">
+    <Position X="7.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Library\Enum_Business.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

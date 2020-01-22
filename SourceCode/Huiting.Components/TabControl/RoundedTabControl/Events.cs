@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     public delegate void UpDownButtonPaintEventHandler(
         object sender,

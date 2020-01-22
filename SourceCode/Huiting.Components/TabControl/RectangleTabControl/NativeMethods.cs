@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
 	/// <summary>
 	/// Description of NativeMethods.

@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Drawing.Design;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     public class HWVDataGridViewColumnConverter : TypeConverter
     {

@@ -1,6 +1,8 @@
-﻿using Huiting.DataEditor.Controls;
+﻿using DevExpress.XtraEditors;
+using Huiting.DataEditor.Controls;
 using Huiting.DataEditor.Enum;
 using Huiting.DataEditor.Models;
+using Huiting.DevComponents;
 using System;
 using System.Data;
 using System.Drawing;
@@ -8,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Huiting.DataEditor.ExcelHelper
 {
-    public partial class ExcelFiledMappingConfig : Form
+    public partial class ExcelFiledMappingConfig : DevXtraForm
     {
         DataSet curSet = null;
         string UserSelSheetName = "";
@@ -173,9 +175,6 @@ namespace Huiting.DataEditor.ExcelHelper
                         curRow["MappingColumnName"] = TempValue;
                     }
                 }
-
-
-
             }
 
             FillListView();

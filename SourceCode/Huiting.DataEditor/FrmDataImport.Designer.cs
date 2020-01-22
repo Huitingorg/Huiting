@@ -3,14 +3,14 @@
     partial class FrmDataImport
     {
         /// <summary>
-        /// 必需的设计器变量。
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 清理所有正在使用的资源。
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,45 +20,42 @@
             base.Dispose(disposing);
         }
 
-        #region Windows 窗体设计器生成的代码
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataImport));
             this.wizardControl1 = new DevExpress.XtraWizard.WizardControl();
             this.welcomeWizardPage1 = new DevExpress.XtraWizard.WelcomeWizardPage();
-            this.panel_MainItem = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_BDCL = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_curstom = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_Excel = new System.Windows.Forms.Button();
-            this.btn_Server = new System.Windows.Forms.Button();
-            this.completionWizardPage1 = new DevExpress.XtraWizard.CompletionWizardPage();
+            this.pnlFormat = new Huiting.Components.DrawPanel.IconItemPanel();
+            this.pnlExcel = new Huiting.Components.DrawPanel.IconItemPanel();
+            this.pnlDB = new Huiting.Components.DrawPanel.IconItemPanel();
+            this.pnlResult = new Huiting.Components.DrawPanel.IconItemPanel();
             this.wizardPage1 = new DevExpress.XtraWizard.WizardPage();
             this.uC_ExcelFileSel1 = new Huiting.DataEditor.Controls.UC_ExcelFileSel();
-            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.completionWizardPage1 = new DevExpress.XtraWizard.CompletionWizardPage();
+            this.wizardPage2 = new DevExpress.XtraWizard.WizardPage();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblProgressTip = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardControl1.SuspendLayout();
             this.welcomeWizardPage1.SuspendLayout();
-            this.panel_MainItem.SuspendLayout();
             this.wizardPage1.SuspendLayout();
+            this.completionWizardPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // wizardControl1
             // 
             this.wizardControl1.CancelText = "取消";
             this.wizardControl1.Controls.Add(this.welcomeWizardPage1);
-            this.wizardControl1.Controls.Add(this.completionWizardPage1);
             this.wizardControl1.Controls.Add(this.wizardPage1);
+            this.wizardControl1.Controls.Add(this.completionWizardPage1);
+            this.wizardControl1.Controls.Add(this.wizardPage2);
             this.wizardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wizardControl1.Image = global::Huiting.DataEditor.Properties.Resources.data1;
+            this.wizardControl1.Image = global::Huiting.DataEditor.Properties.Resources.data;
             this.wizardControl1.ImageLayout = System.Windows.Forms.ImageLayout.None;
             this.wizardControl1.Location = new System.Drawing.Point(0, 0);
             this.wizardControl1.Name = "wizardControl1";
@@ -66,206 +63,176 @@
             this.wizardControl1.Pages.AddRange(new DevExpress.XtraWizard.BaseWizardPage[] {
             this.welcomeWizardPage1,
             this.wizardPage1,
+            this.wizardPage2,
             this.completionWizardPage1});
-            this.wizardControl1.PreviousText = "< 上一步";
-            this.wizardControl1.Size = new System.Drawing.Size(945, 573);
+            this.wizardControl1.PreviousText = "< 上一部";
+            this.wizardControl1.Size = new System.Drawing.Size(1021, 598);
+            this.wizardControl1.NextClick += new DevExpress.XtraWizard.WizardCommandButtonClickEventHandler(this.wizardControl1_NextClick);
             // 
             // welcomeWizardPage1
             // 
-            this.welcomeWizardPage1.Controls.Add(this.windowsUIButtonPanel1);
-            this.welcomeWizardPage1.Controls.Add(this.panel_MainItem);
-            this.welcomeWizardPage1.IntroductionText = "";
+            this.welcomeWizardPage1.Controls.Add(this.pnlFormat);
+            this.welcomeWizardPage1.Controls.Add(this.pnlExcel);
+            this.welcomeWizardPage1.Controls.Add(this.pnlDB);
+            this.welcomeWizardPage1.Controls.Add(this.pnlResult);
+            this.welcomeWizardPage1.IntroductionText = "该向导引导用户，根据不同的数据形式，选择对应的数据类型，实现数据导入。";
             this.welcomeWizardPage1.Name = "welcomeWizardPage1";
             this.welcomeWizardPage1.ProceedText = "";
-            this.welcomeWizardPage1.Size = new System.Drawing.Size(728, 422);
-            this.welcomeWizardPage1.Text = "数据来源";
+            this.welcomeWizardPage1.Size = new System.Drawing.Size(804, 447);
+            this.welcomeWizardPage1.Text = "待导入数据类型选择";
             // 
-            // panel_MainItem
+            // pnlFormat
             // 
-            this.panel_MainItem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel_MainItem.Controls.Add(this.label5);
-            this.panel_MainItem.Controls.Add(this.btn_BDCL);
-            this.panel_MainItem.Controls.Add(this.label2);
-            this.panel_MainItem.Controls.Add(this.label3);
-            this.panel_MainItem.Controls.Add(this.btn_curstom);
-            this.panel_MainItem.Controls.Add(this.label1);
-            this.panel_MainItem.Controls.Add(this.btn_Excel);
-            this.panel_MainItem.Controls.Add(this.btn_Server);
-            this.panel_MainItem.Location = new System.Drawing.Point(89, 64);
-            this.panel_MainItem.Margin = new System.Windows.Forms.Padding(4);
-            this.panel_MainItem.Name = "panel_MainItem";
-            this.panel_MainItem.Size = new System.Drawing.Size(545, 138);
-            this.panel_MainItem.TabIndex = 6;
+            this.pnlFormat.BorderColor = System.Drawing.Color.White;
+            this.pnlFormat.BorderColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(160)))), ((int)(((byte)(218)))));
+            this.pnlFormat.BorderColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(192)))), ((int)(((byte)(231)))));
+            this.pnlFormat.BorderColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlFormat.FillColor = System.Drawing.Color.White;
+            this.pnlFormat.FillColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.pnlFormat.FillColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            this.pnlFormat.FillColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlFormat.Image = global::Huiting.DataEditor.Properties.Resources.customize;
+            this.pnlFormat.Location = new System.Drawing.Point(536, 160);
+            this.pnlFormat.Name = "pnlFormat";
+            this.pnlFormat.Size = new System.Drawing.Size(79, 105);
+            this.pnlFormat.TabIndex = 9;
+            this.pnlFormat.Text = "专用格式";
+            this.pnlFormat.Click += new System.EventHandler(this.pnlFormat_Click);
             // 
-            // label5
+            // pnlExcel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(179, 97);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "数据库";
+            this.pnlExcel.BorderColor = System.Drawing.Color.White;
+            this.pnlExcel.BorderColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(160)))), ((int)(((byte)(218)))));
+            this.pnlExcel.BorderColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(192)))), ((int)(((byte)(231)))));
+            this.pnlExcel.BorderColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlExcel.FillColor = System.Drawing.Color.White;
+            this.pnlExcel.FillColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.pnlExcel.FillColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            this.pnlExcel.FillColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlExcel.Image = global::Huiting.DataEditor.Properties.Resources.excel;
+            this.pnlExcel.Location = new System.Drawing.Point(130, 160);
+            this.pnlExcel.Name = "pnlExcel";
+            this.pnlExcel.Size = new System.Drawing.Size(79, 105);
+            this.pnlExcel.TabIndex = 10;
+            this.pnlExcel.Text = "Excel格式";
+            this.pnlExcel.Click += new System.EventHandler(this.pnlExcel_Click);
             // 
-            // btn_BDCL
+            // pnlDB
             // 
-            this.btn_BDCL.BackgroundImage = global::Huiting.DataEditor.Properties.Resources.customize;
-            this.btn_BDCL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_BDCL.FlatAppearance.BorderSize = 0;
-            this.btn_BDCL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BDCL.ImageIndex = 0;
-            this.btn_BDCL.Location = new System.Drawing.Point(413, 23);
-            this.btn_BDCL.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_BDCL.Name = "btn_BDCL";
-            this.btn_BDCL.Size = new System.Drawing.Size(64, 64);
-            this.btn_BDCL.TabIndex = 1;
-            this.btn_BDCL.UseVisualStyleBackColor = true;
-            this.btn_BDCL.Click += new System.EventHandler(this.btn_BDCL_Click);
+            this.pnlDB.BorderColor = System.Drawing.Color.White;
+            this.pnlDB.BorderColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(160)))), ((int)(((byte)(218)))));
+            this.pnlDB.BorderColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(192)))), ((int)(((byte)(231)))));
+            this.pnlDB.BorderColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlDB.FillColor = System.Drawing.Color.White;
+            this.pnlDB.FillColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.pnlDB.FillColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            this.pnlDB.FillColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlDB.Image = global::Huiting.DataEditor.Properties.Resources.db;
+            this.pnlDB.Location = new System.Drawing.Point(268, 160);
+            this.pnlDB.Name = "pnlDB";
+            this.pnlDB.Size = new System.Drawing.Size(79, 105);
+            this.pnlDB.TabIndex = 11;
+            this.pnlDB.Text = "数据库";
+            this.pnlDB.Click += new System.EventHandler(this.pnlDB_Click);
             // 
-            // label2
+            // pnlResult
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(412, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "专用格式";
-            this.label2.Click += new System.EventHandler(this.btn_Excel_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 97);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Excel格式";
-            // 
-            // btn_curstom
-            // 
-            this.btn_curstom.BackgroundImage = global::Huiting.DataEditor.Properties.Resources.db;
-            this.btn_curstom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_curstom.FlatAppearance.BorderSize = 0;
-            this.btn_curstom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_curstom.ImageIndex = 2;
-            this.btn_curstom.Location = new System.Drawing.Point(173, 23);
-            this.btn_curstom.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_curstom.Name = "btn_curstom";
-            this.btn_curstom.Size = new System.Drawing.Size(64, 64);
-            this.btn_curstom.TabIndex = 1;
-            this.btn_curstom.UseVisualStyleBackColor = true;
-            this.btn_curstom.Click += new System.EventHandler(this.btn_curstom_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "成果库";
-            // 
-            // btn_Excel
-            // 
-            this.btn_Excel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Excel.BackgroundImage")));
-            this.btn_Excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Excel.FlatAppearance.BorderSize = 0;
-            this.btn_Excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Excel.ImageIndex = 1;
-            this.btn_Excel.Location = new System.Drawing.Point(293, 23);
-            this.btn_Excel.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Excel.Name = "btn_Excel";
-            this.btn_Excel.Size = new System.Drawing.Size(64, 64);
-            this.btn_Excel.TabIndex = 1;
-            this.btn_Excel.UseVisualStyleBackColor = true;
-            this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
-            // 
-            // btn_Server
-            // 
-            this.btn_Server.BackgroundImage = global::Huiting.DataEditor.Properties.Resources.cloud;
-            this.btn_Server.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Server.FlatAppearance.BorderSize = 0;
-            this.btn_Server.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Server.ImageIndex = 3;
-            this.btn_Server.Location = new System.Drawing.Point(53, 23);
-            this.btn_Server.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Server.Name = "btn_Server";
-            this.btn_Server.Size = new System.Drawing.Size(64, 64);
-            this.btn_Server.TabIndex = 1;
-            this.btn_Server.UseVisualStyleBackColor = true;
-            this.btn_Server.Click += new System.EventHandler(this.btn_Server_Click);
-            // 
-            // completionWizardPage1
-            // 
-            this.completionWizardPage1.Name = "completionWizardPage1";
-            this.completionWizardPage1.Size = new System.Drawing.Size(728, 423);
+            this.pnlResult.BorderColor = System.Drawing.Color.White;
+            this.pnlResult.BorderColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(160)))), ((int)(((byte)(218)))));
+            this.pnlResult.BorderColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(192)))), ((int)(((byte)(231)))));
+            this.pnlResult.BorderColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlResult.FillColor = System.Drawing.Color.White;
+            this.pnlResult.FillColorWithMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.pnlResult.FillColorWithMouseIn = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            this.pnlResult.FillColorWithMouseOut = System.Drawing.Color.White;
+            this.pnlResult.Image = global::Huiting.DataEditor.Properties.Resources.cloud;
+            this.pnlResult.Location = new System.Drawing.Point(405, 160);
+            this.pnlResult.Name = "pnlResult";
+            this.pnlResult.Size = new System.Drawing.Size(79, 105);
+            this.pnlResult.TabIndex = 12;
+            this.pnlResult.Text = "成果库";
+            this.pnlResult.Click += new System.EventHandler(this.pnlResult_Click);
             // 
             // wizardPage1
             // 
             this.wizardPage1.Controls.Add(this.uC_ExcelFileSel1);
+            this.wizardPage1.DescriptionText = "用户可以下载Excel业务模板，整理数据，亦可做字段映射；建议使用前者。";
             this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(913, 399);
+            this.wizardPage1.Size = new System.Drawing.Size(989, 424);
+            this.wizardPage1.Text = "Excel数据导入";
             // 
             // uC_ExcelFileSel1
             // 
-            this.uC_ExcelFileSel1.BackColor = System.Drawing.Color.White;
+            this.uC_ExcelFileSel1.BackColor = System.Drawing.Color.Transparent;
             this.uC_ExcelFileSel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_ExcelFileSel1.Location = new System.Drawing.Point(0, 0);
-            this.uC_ExcelFileSel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uC_ExcelFileSel1.Margin = new System.Windows.Forms.Padding(4);
             this.uC_ExcelFileSel1.Name = "uC_ExcelFileSel1";
-            this.uC_ExcelFileSel1.Size = new System.Drawing.Size(913, 399);
+            this.uC_ExcelFileSel1.Size = new System.Drawing.Size(989, 424);
             this.uC_ExcelFileSel1.TabIndex = 0;
-            this.uC_ExcelFileSel1.Title = "请选择导入Excel文件";
             // 
-            // windowsUIButtonPanel1
+            // completionWizardPage1
             // 
-            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
-            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(151, 235);
-            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(398, 119);
-            this.windowsUIButtonPanel1.TabIndex = 7;
-            this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
+            this.completionWizardPage1.Controls.Add(this.progressBar1);
+            this.completionWizardPage1.Controls.Add(this.lblProgressTip);
+            this.completionWizardPage1.FinishText = "";
+            this.completionWizardPage1.Name = "completionWizardPage1";
+            this.completionWizardPage1.ProceedText = "";
+            this.completionWizardPage1.Size = new System.Drawing.Size(804, 448);
+            // 
+            // wizardPage2
+            // 
+            this.wizardPage2.Name = "wizardPage2";
+            this.wizardPage2.Size = new System.Drawing.Size(989, 424);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(38, 221);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(733, 34);
+            this.progressBar1.TabIndex = 4;
+            // 
+            // lblProgressTip
+            // 
+            this.lblProgressTip.AutoSize = true;
+            this.lblProgressTip.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgressTip.Location = new System.Drawing.Point(33, 193);
+            this.lblProgressTip.Name = "lblProgressTip";
+            this.lblProgressTip.Size = new System.Drawing.Size(67, 25);
+            this.lblProgressTip.TabIndex = 3;
+            this.lblProgressTip.Text = "label3";
             // 
             // FrmDataImport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(945, 573);
+            this.ClientSize = new System.Drawing.Size(1021, 598);
             this.Controls.Add(this.wizardControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmDataImport";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "数据导入";
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).EndInit();
             this.wizardControl1.ResumeLayout(false);
             this.welcomeWizardPage1.ResumeLayout(false);
-            this.panel_MainItem.ResumeLayout(false);
-            this.panel_MainItem.PerformLayout();
             this.wizardPage1.ResumeLayout(false);
+            this.completionWizardPage1.ResumeLayout(false);
+            this.completionWizardPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private DevExpress.XtraWizard.WizardControl wizardControl1;
         private DevExpress.XtraWizard.WelcomeWizardPage welcomeWizardPage1;
-        private DevExpress.XtraWizard.CompletionWizardPage completionWizardPage1;
-        private System.Windows.Forms.Panel panel_MainItem;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_curstom;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Excel;
-        private System.Windows.Forms.Button btn_BDCL;
-        private System.Windows.Forms.Button btn_Server;
         private DevExpress.XtraWizard.WizardPage wizardPage1;
+        private DevExpress.XtraWizard.CompletionWizardPage completionWizardPage1;
+        private DevExpress.XtraWizard.WizardPage wizardPage2;
+        private Components.DrawPanel.IconItemPanel pnlFormat;
+        private Components.DrawPanel.IconItemPanel pnlExcel;
+        private Components.DrawPanel.IconItemPanel pnlDB;
+        private Components.DrawPanel.IconItemPanel pnlResult;
         private Controls.UC_ExcelFileSel uC_ExcelFileSel1;
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblProgressTip;
     }
 }
-

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components.DrawPanel
 {
     [Serializable]
     public class MousePanel : DrawPanel
@@ -91,6 +91,14 @@ namespace BDSoft.Components
         }
 
         #region Events
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (timer1.Enabled)
+                return;
+            base.SetColor(borderColorWithMouseIn, fillColorWithMouseIn);
+        }
 
         protected override void OnMouseEnter(EventArgs e)
         {

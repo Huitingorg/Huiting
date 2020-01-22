@@ -5,7 +5,7 @@ using System.Drawing.Design;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     public class HWVDataGridViewColumnEditor : UITypeEditor
     {

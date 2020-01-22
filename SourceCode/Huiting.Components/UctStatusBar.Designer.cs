@@ -1,4 +1,4 @@
-﻿namespace BDSoft.Components
+﻿namespace Huiting.Components
 {
     partial class UctStatusBar
     {

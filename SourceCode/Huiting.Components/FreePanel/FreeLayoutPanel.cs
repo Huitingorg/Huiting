@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Huiting.Common;
 
-namespace BDSoft.Components
+namespace Huiting.Components
 {
     [Serializable]
     public class FreeLayoutPanel<T> : Panel where T : IFreeLayoutChildControl

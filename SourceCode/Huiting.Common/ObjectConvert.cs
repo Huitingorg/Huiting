@@ -458,5 +458,42 @@ namespace Huiting.Common
             foreach (DataRow dr in dt.Rows)
                 dr[pyColumn] = ChineseToPinYin.ToPinYin(dr[sourceColumn].ToString(), null);
         }
+
+        /// <summary>
+        /// 首字母小写写
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string FirstCharToLower(this string input)
+        {
+            if (String.IsNullOrEmpty(input))
+                return input;
+            string str = input.First().ToString().ToLower() + input.Substring(1);
+            return str;
+        }
+
+        /// <summary>
+        /// 首字母大写
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string FirstCharToUpper(this string input)
+        {
+            if (String.IsNullOrEmpty(input))
+                return input;
+            string str = input.First().ToString().ToUpper() + input.Substring(1);
+            return str;
+        }
+
+        public static IEnumerable<T> Append<T>(
+           this IEnumerable<T> values, T value)
+        {
+            foreach (T item in values)
+            {
+                yield return item;
+            }
+
+            yield return value;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BDSoft.Components
+namespace Huiting.Components.DrawPanel
 {
     [Serializable]
     public class DrawPanel : Panel
